@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'node_modules/papercss/dist/paper.min.css';
+import '../node_modules/papercss/dist/paper.min.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
