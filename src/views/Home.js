@@ -7,3 +7,5 @@ class HomeView extends Component {
         );
     }
 }
+
+export default HomeView;

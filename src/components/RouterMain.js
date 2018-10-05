@@ -1,5 +1,5 @@
 import React from 'react';
-import HomeView from './views/Home';
+import HomeView from '../views/Home';
 
 import { Switch, Route } from 'react-router-dom';
 
@@ -10,3 +10,5 @@ const RouterMain = () => (
         </Switch>
     </main>
 );
+
+export default RouterMain;
