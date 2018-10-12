@@ -30,7 +30,8 @@ class NewBlog extends Component {
 
         ref.push().set({
             title: this.state.title,
-            content: this.state.content
+            content: this.state.content,
+            userUID: firebase.auth().currentUser.uid
         }).then(res => {
             let {history} = this.props;
             history.push({
