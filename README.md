@@ -1,4 +1,4 @@
-![React + firebase](https://cdn-images-1.medium.com/max/2000/1*ytMIcp6uu6UIZpApG1LFYg.png)
+![React + firebase](https://raw.githubusercontent.com/Obsinqsob01/rewrite/master/img/logoblue.png)
 
 # Rewrite :pencil:
 Web to share your thinks with others
