@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import firebase from 'firebase';
 
@@ -10,8 +11,6 @@ class AllBlogs extends Component {
             userUID: '',
             blogs: []
         };
-
-        this.renderAll = this.renderAll.bind(this);
     }
 
     componentWillMount() {
@@ -41,18 +40,16 @@ class AllBlogs extends Component {
         }
     }
 
-    renderAll() {
-        Object.keys(this.state.blogs).map((key, index) => {
-            let blog = this.state.blogs[key];
-            
-            return <h4 key={key}>{blog.title} </h4>
-        });
-    }
-
     render() {
         return (
             <div>
-                { this.renderAll() }
+                { 
+                    Object.keys(this.state.blogs).map((key, index) => {
+                        let blog = this.state.blogs[key];
+                        
+                        return <Link to={`/blog/${key}`}><h4 key={key}>{ blog.title }</h4></Link>
+                    })
+                }
             </div>
         );
     }
