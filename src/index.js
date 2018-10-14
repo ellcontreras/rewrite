@@ -17,6 +17,16 @@ firebase.initializeApp({
     messagingSenderId: "1036326077937"
 });
 
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        console.log(user);
+    } else {
+        console.log("There is not an user");
+    }
+}, error => {
+    console.log(error);
+});
+
 ReactDOM.render((
 <BrowserRouter>
     <App /> 
