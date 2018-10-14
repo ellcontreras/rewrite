@@ -13,10 +13,12 @@ class Blog extends Component {
     }
 
     componentWillMount() {
-        const { history } = this.props;
+        const { match } = this.props;
 
-        const blogRef = firebase.database().ref("/rewrite/blogs");
-        blogRef(`/${history.param.id}`).on('value', snapshot => {
+        const blogRef = firebase.database()
+        .ref(`/rewrite/blogs/${match.params.id}`);
+
+        blogRef.on('value', snapshot => {
             this.setState({
                 title: snapshot.val().title,
                 content: snapshot.val().content
