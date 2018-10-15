@@ -47,6 +47,11 @@ code {
 }
 
 .blog-post__link h4 {
+  border-bottom: 5px solid transparent;
+  transition: .4s;
+}
+
+.blog-post__link:hover h4 {
   border-bottom: 5px solid #41403e;
   border-bottom-left-radius: 15px 3px;
   border-bottom-right-radius: 15px 5px;
