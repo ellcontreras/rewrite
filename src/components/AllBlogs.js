@@ -42,12 +42,12 @@ class AllBlogs extends Component {
 
     render() {
         return (
-            <div>
+            <div className="blog-post">
                 { 
                     Object.keys(this.state.blogs).map((key, index) => {
                         let blog = this.state.blogs[key];
                         
-                        return <Link to={`/blog/${key}`}><h4 key={key}>{ blog.title }</h4></Link>
+                        return <Link className="blog-post__link" to={`/blog/${key}`}><h4 key={key}>{ blog.title }</h4></Link>
                     })
                 }
             </div>
