@@ -16,3 +16,54 @@ code {
 .text-center {
   text-align: center !important;
 }
+
+.blog-post {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px){
+  .blog-post {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.blog-post__link {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+  border:2px solid #eee;
+  color: #41403e;
+  background: none;
+  transition: .4s;
+}
+
+.blog-post__link h4 {
+  border-bottom: 5px solid transparent;
+  transition: .4s;
+}
+
+.blog-post__link:hover h4 {
+  border-bottom: 5px solid #41403e;
+  border-bottom-left-radius: 15px 3px;
+  border-bottom-right-radius: 15px 5px;
+}
+
+@media (max-width: 768px){
+  .blog-post__link{
+     margin-bottom: 10px;
+  }
+}
+
+.blog-post__link:hover,
+.blog-post__link:focus {
+  background: #eee;
+}
